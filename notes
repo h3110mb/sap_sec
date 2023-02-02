@@ -1,0 +1,25 @@
+whois.com
+apt install golang-go
+https://github.com/projectdiscovery/subfinder
+https://search.censys.io/
+https://github.com/FortyNorthSecurity/EyeWitness
+https://addons.mozilla.org/en-US/firefox/addon/wappalyzer/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search
+https://portswigger.net/burp/releases/professional-community-2022-12-7?requestededition=community&requestedplatform=
+https://xsshunter.com/app
+
+amass.sublist3r,knocky.py,virustotal,crt.sh,subfinder,findomain
+
+ffuf--|
+dirb
+dirbuster
+feroxbuster
+dirsearch--|
+https://nvd.nist.gov/vuln-metrics/cvss
+https://www.exploit-db.com/google-hacking-database
+https://github.com/leebaird/discover
+git clone https://github.com/leebaird/discover.git
+
+1=1
+'or''='
+
+sqlmap -u <> --dbs| -D <> --tables | -D -T --columns | -D -T -C --dump
