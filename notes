@@ -23,3 +23,32 @@ git clone https://github.com/leebaird/discover.git
 'or''='
 
 sqlmap -u <> --dbs| -D <> --tables | -D -T --columns | -D -T -C --dump
+
+SSRF
+-----------------------------
+example.com/login.php?file=image.png
+
+
+
+LFI| RFI
+
+
+
+
+
+file=
+url=
+location=
+fopen=
+uri=
+redirect=
+
+https://sourceforge.net/projects/metasploitable/files/Metasploitable2/
+https://github.com/tomnomnom/qsreplace
+hakrawler
+gospider 
+waybackurls
+https://github.com/ksharinarayanan/SSRFire
+https://bgp.he.net
+https://app.interactsh.com/#/
+https://www.crunchbase.com/
