@@ -52,3 +52,33 @@ https://github.com/ksharinarayanan/SSRFire
 https://bgp.he.net
 https://app.interactsh.com/#/
 https://www.crunchbase.com/
+
+subdomains --> Live domains|nmap | scanner -->spider --> spider.txt--> dalfox | xsshunter| subjs|sqlmap | ssrf | lfi 
+
+subdomains | whois | asn | cruchbase | shodan | censys |  discover | dorking |  
+
+
+
+
+https://github.com/techgaun/github-dorks
+https://github.com/m4ll0k/SecretFinder
+https://github.com/ArpitKubadia/JS-Secret-Finder
+https://subgraph.com/vega/download.html
+https://github.com/projectdiscovery/nuclei-templates
+https://github.com/projectdiscovery/nuclei
+http://rgaucher.info/beta/grabber/
+https://www.sans.org/top25-software-errors/
+wapiti3
+w3af
+
+http://10.0.2.4/dvwa/vulnerabilities/csrf/?transfer_amt=50000&transfer_account=123456&Change=Change#
+
+anti-csrf token
+
+https://cisofy.com/lynis/
+https://www.fossology.org/
+
+php > echo base64_decode(strrev(hex2bin('3d3d516343746d4d6d6c315')));
+
+ ; cat /etc/natas_webpass/natas10; 
+
