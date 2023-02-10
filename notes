@@ -28,13 +28,7 @@ SSRF
 -----------------------------
 example.com/login.php?file=image.png
 
-
-
 LFI| RFI
-
-
-
-
 
 file=
 url=
@@ -82,3 +76,128 @@ php > echo base64_decode(strrev(hex2bin('3d3d516343746d4d6d6c315')));
 
  ; cat /etc/natas_webpass/natas10; 
 
+AWS--> AZURE
+
+
+
+
+4E---| 
+
+
+
+
+EXCITE 
+---------------------------------------
+Engage leader/stake holders/investor 
+analyze everything inside organization
+communication
+plan training 
+
+  ENABLE  
+ -------------------------------------------
+ engage leaders 
+ org. conflicts analys 
+ campaign
+ training
+ 
+EXPAND
+----------------------------------
+Promote your new adoption 
+skills gap
+ 
+v1--> visit webzite> click ->click->find page
+v2-> visit web->search->page
+training 
+
+EMBED
+------------------------------------
+continious innovation
+measure success
+promote innovation
+training on new update or release 
+
+
+
+AUDIT
+============================================
+
+Infra Audit
+--------------------
+End devices security
+virtualization security
+patch management
+configuration management
+end device logins
+end device running services
+infra logs
+Reports (versioning)
+policies for infra
+SaaS--> audit 
+
+
+AWS VPC
+================================
+VIRTUAL PRIVATE CLOUD
+
+Subnets:
+Route Tables:
+INternet Gateways (IGW):
+NAT:
+customer gateway:
+security groups:
+VPC peering: 
+NACL:NETWORK ACL
+
+EC2
+====================================
+INSTANCES--WINDOWS 
+
+S3
+====================================
+
+
+KMS
+----------------------------------
+KEY---->DATA-->ENCRYPTED DATA
+
+MASTER-->KEY--> ENCRYPTED KEY
+
+ENC. K & D--- stored
+
+
+ENCRYPTED DATA KEY---->MASTER KEY---> DATA KEY
+
+DATA KEY--->ENC DATA--> DATA
+
+
+
+CLOODHSM---> CLOUD HARDWARE SECURITY MODULE    --->ESCROW
+
+
+---------------------------------------------------------------------
+
+AWS CLI
+=========================
+s3
+
+
+aws s3 ls s3://url
+aws s3 rm s3://url/folder --recursive
+aws s3 cp s3://url/file.txt  myfile --resursive
+aws s3 sync myfile s3://url/folder 
+
+
+data protection
+-----------------------------------
+1.documentation
+2.policies
+3.risks
+4.cloud security
+5.data backup
+6.data recovery plan
+7.Assess management. (IAM,POLICY BASED ACCESS)
+8.enforcing on-prem policies 
+9.AUDITING
+10.INSIDER THREATS (negligent,malicious,3rd party)
+11.data-leaks 
+12.continuous monitoring 
