@@ -206,3 +206,33 @@ https://github.com/0xArab/diva-apk-file/blob/main/DivaApplication.apk
 https://developer.android.com/studio/releases/platform-tools
 https://ibotpeaches.github.io/Apktool/install/
 https://github.com/skylot/jadx
+
+SAST-static application security testingDAST-dynamic app security testing   Scanner/tools   staticManual Dynamic   
+Android Application Pentest—————————————————————————
+Linux based OS——————Ls,rm,pwd,etc Dalvik VM ART- Android Run time ——>  Androidmanifest.xml.  <blueprint>
+Android.text—lib to manage textandroid.view—render text on displayAndroid.app—— applicaton level accessAndroid.widget-  buttons, views, etcAndroid.opengl—3d    
+Application framework———————————————Activity managerView systemResource managerNotification content provider     
+Android Intent————————————— Start fb—>FB(activity)—>profile/wall—>click/browser/update/messenger/call———Kernel  
+xposed framework—sslunpinning—root cloak MVC  User---->Controller——>model——>controller—>user APIs   
+Ipa—iOS app extensionApp binary—
+Info.plist ——app display name, version , config infoFrameworks—list of libEmbedded mobileprovision— certificates 
+Plist files ———store sensitive information iOS appCore data— sqlite (sensitive information)
+Firebase—— .jsonYAPdatabase—sqlite dbRealm db— sqlite dbCache data—   
+Ssh admin@ipAlpine  
+Push Frida server./frida-server 
+Frida-ps -U Frida -U -f iOS.app -L pinning.js -no-paus
+Objection -g iphone.app explore 
+cydia— ssl killswitch /var/application/var/mobile/containers/data/application/var/mobile/containers/application.   
+
+objection -g com.name.diva explore
+obj>ios plist/nsuserdefault get
+
+
+
+frida-server android
+chmod 777 frida-server 
+./frida-server
+
+
+cmd>frida-ps -U
+objection -g appname explore
