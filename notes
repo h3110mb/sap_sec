@@ -236,3 +236,275 @@ chmod 777 frida-server
 
 cmd>frida-ps -U
 objection -g appname explore
+
+
+
+
+LIVE HUNTING METHODLOGY ⚡️
+
+METHODLOGY ? 
+• To find the good target ? 
+• You need to do recon
+
+RECON : 
+• Subdomains (subfinder) HTTPROBE 
+• Automate subdomains : https://subdomainfinder.c99.nl/ 
+• Nuclei 
+• Dirsearch 
+• composer-lock.json , package.json
+
+MANUAL ( BUSINESS LOGIC BUGS ) 
+• Which kind of functionalities you need to test first
+
+1 - WEAK REGISTRATION VULNERABILITY HTTP OR HTTPS 
+• Go to the login page 
+• Copy the url https://example.com/#/signin 
+• Change the https to http http://app.example.com/#/signin 
+• Paste the http url into incognito mode if they running on http and https 
+both 
+• There will be a vulnerability
+
+2 - EMAIL HTML INJECTION / HYPERLINK INJECTION / SSTI / XSS 
+• Go to the signup page 
+• Enter your payload what you want to try In first name and last name 
+• If they accept your paylaod and payload is triggerd in your mail 
+• There is a vuln
+
+3 - WEAK PASSWORD POLICY 
+• Go to the signup page 
+• Enter weak password 
+• abcd , 123456 , 12345678 
+• If they accept your password there will be a vuln
+
+4 - WEAK PASSWORD IMPLEMNTATION ON CHANGE PASSWORD
+• Let suppose your old password is 12345678 
+• Go to the profile 
+• Change password 
+• Enter new password 12345678 again like a old password 
+• If they shows that your password is changed there is a vuln
+
+5 - SESSION NOT EXPIRED AFTER PASSWORD CHANGE 
+• Open one account in two browser 
+• 1st Brave , 2nd Firefox 
+• Change the password in brave 
+• And go to firefox update any information 
+• If information is updated successfully there will be a vuln
+
+6 - EXIF META DATA LEAKAGE FROM IMAGES / DATA NOT STRIPPED 
+FROM EXIF METADATA 
+• Go to the profile 
+• Upload exif image 
+• Download the image 
+• Open exif tool 
+• Paste or upload your image there 
+• See the informtaion is leaking
+
+7 - NO CONFIRMATION EMAIL ON SIGNUP 
+• Go to signup page 
+• Signup successfully 
+• You need to check your mail 
+• You not received any confirmation link 
+IMPACT ? - Attacker can do pre account takeover
+
+8 - BUSINESS LOGIC CHANGE EMAIL BUG 
+• You are not allowed to change email 
+• Go to inspect element 
+• Change disabled to enabled 
+• if you successfully changed the email 
+• And update profile 
+• Email will updated 
+IMPACT ? Account takeover
+
+9 - WEAK REGISTRATION AND PASSWORD RESET IMPLEMENTATION- 
+CONFIRMATION TOKEN OVER HTTP 
+• We need to register account 
+• Then we’ll receive a verification email 
+• Just copy that link paste into notepad 
+• And You can see if the link is http or https 
+• If it is http open in browser if you not logged in they are showinig logout 
+that means there is a vuln 
+• I mean after paste the link into browser you need to check are signed in 
+already or you need to sign up 
+• If you are logged out there is a vuln
+
+10 - LACK OF SECURITY HEADER - CACHE CONTROL FOR A SEN- 
+STIVE PAGE 
+• Visit any website 
+• Register yourself and enter your credentials 
+• After signed in website 
+• After login go to profile there is your personal data right 
+• Then Logout 
+• Now click on back button and see if the data is showing or not 
+• If they showing your data that means there is a vulnerability 
+(You can check this vuln on any sesntive page like my-profile , security questions when sign in and many more... )
+
+11 - BROKEN AUTHENTICATION SESSION MANAGEMENT 
+• Go to profile 
+• Update anything and intercept the request 
+• Send it to repeater 
+• Now logout 
+• Go to repeater back update any data 
+• Then again login 
+• If information is updated there is a vulnerability
+
+12 - DELETE ACCOUNT NO AUTHENTICATION 
+• Go to Profile 
+• Click on delete account 
+• If they are not asking for password directly deleting the account 
+• So there is a vulnerability , You can checkout CSRF On delete account 
+because there is no authentication right
+
+13 - OPEN REDIRECT 
+• Enter //evil.com 
+• %2f%2fevil.com in url’s after = 
+• https://www.example.com/http://evil.com/
+
+14 - TOKEN LEAKAGE THROUGH PASSWORD RESET IN RESPONSE 
+• Visit forgot password page 
+• In Email 
+• Enter any email 
+• Intercept the request and do response as a request 
+• Check this token is leakging in response
+
+
+
+
+https://hackerone.com/hacktivity?sort_type=latest_disclosable_activity_at&filter=type%3Apublic&page=1&range=forever
+
+
+
+DBMS
+-----------------------
+
+
+
+DBMS-DATABASE MANAGEMENT SYSTEM
+
+LIBRARY==DB 
+
+-REDUNDANCY
+-MAINTENANCE
+-FASTER ACCESS
+-ORGANISED DATA
+-CONCURRENCY
+-CONTROL SECURITY-----xxxxxxx
+-BACKUP AND RECOVERY 
+-DATA INDEPENDENCE
+-ISOLATION
+-OPTIMIZATION
+
+WHO CAN ACCESS>>??
+
+ADMIN->misconfig,default creds,
+API------------------------------------------>
+USERS   cred leaks, 
+DEVELOPERS-->exposing queries,haardcoding creds,commenting criticial info,
+ARCHITECT----->INSECURE DESIGN,REPEATATION,
+
+ LEAKS???
+
+DBMS Architecture
+--------------------------------------------------------------
+Direct User Queries
+Applications program
+
+
+ADMIN
+
+
+DDL Compilers
+processor
+|
+|
+database manager <---------->Authorization table
+|
+
+|
+file manager(concurrent access)<--->database (physical, meta)
+
+
+RDMS-relational database model
+----------------------------------------------------------------------
+
+treat all its data as relatios/collection of relation.
+
+set/cartesian product/
+
+
+R={1,2,3,4,5}
+M={MB,MOHIT,SATYA,---------}
+
+5
+0+5/3+2/7-2/
+
+
+DBMS VS RDMS
+--------------------------------
+DB----FILE FORMAT
+RD-TABLE FORMAT
+
+DB-DATA REDUNDANCY
+RD-INDEXING FOR REDUNDANCY
+
+DB-SYSTEM REQUIREMENT IS LOW
+RD-INFRA IS HIGH
+
+DB- CONTROL THE QUANTITY IN EACH FILE
+RD-BIG QUALITY 
+
+DB-DISTRIBUTED ACCESS (LEAST PRIVILEGE)
+RD-DISTRIBUTED DB
+
+DB-WAF,QUERIES   'OR''='
+RD-SECURITY IS TOP
+
+DB-MICROSOFT ACCESS
+RD-SQL
+
+
+MS SQL Architecture
+----------------------------------------------
+2k19 ms
+
+ANSI SQL--ansi 
+Heidisql tool to explore ms sql.
+
+SNI-SERVER NETWORK INTERFACE
+
+Protocol Layer-
+shared memory -- response will be quick
+TCP/IP 
+LAN 
+
+
+Relation Engine:
+
+cmd parser--parse and remove glitch
+optimizer- take care redundancy
+executor-logical behaviour 
+
+sqlserver.exe -- start/stop
+sqlbrowser.exe--browsable sql 
+fdlauncher.exe-- // full text search
+sqlwriter.exe--backups
+msmdsrv/msmdrv.exe -----pyhton language to perform analytics
+Reportingservices.exe/reportingservicesservice.exe  --SSRS  
+msDtssrve.exe--- raw day to readable data
+
+
+1>EXEC sp_configure 'show advanced option',1;
+2>EXEC sp_configure 'xp_cmdshell',1;
+3>RECONFIGURE
+4>go
+
+1>xp_cmdshell 'whoami';
+2>go
+
+msf:
+=======================================
+(admin/mssql/mssql_enum_sql_logins) >
+admin/mssql/mssql_enum
+(scanner/mssql/mssql_ping)
+server/capture/mssql
+(windows/mssql/mssql_payload)
+admin/mssql/mssql_exec
