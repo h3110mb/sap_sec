@@ -508,3 +508,69 @@ admin/mssql/mssql_enum
 server/capture/mssql
 (windows/mssql/mssql_payload)
 admin/mssql/mssql_exec
+
+
+NOSQL
+---------------------------------------------------
+
+dbms
+rdms
+
+Nosql is non relational.
+Nosql---BIG DATA 
+
+schemaa free or schema loose
+data structure
+API 
+User Interfaces is good,easy to use
+its easier to choose data using APIs at any level
+JSON
+database are usually iinternet facing ---- more chance of attacks
+ditributed execution is there
+auto-scaling 
+commit long term consistency
+
+1fb
+2 fb ads
+3fb developer 
+
+
+Key-value based pair-json,txt,BLOB binary large object
+
+column -oriented graphs-
+
+
+document oriented  ---
+
+
+MongoDB
+-------------------------------------------
+
+Document oriented nosql db.
+
+
+Architecture
+---------------------------------
+1. id--> primary key  name,email,mob,pass 
+2.collection:
+3.cursor: pointer which results query
+4.Database:
+5.field
+6.json/bson 
+
+RD-table
+MD-Collections
+
+RD ROW
+MD DOCUMENT
+
+RD Column
+MD field
+
+RD jOINS
+md EMBEDDED DOCUMENTS
+
+https://ncp.nist.gov/checklist/1019/download/9174
+https://paper.bobylive.com/Security/CIS/CIS_MongoDB_4_Benchmark_v1_0_0.pdf
+https://blog.convisoappsec.com/en/a-case-study-on-cve-2021-22204-exiftool-rce/
+
